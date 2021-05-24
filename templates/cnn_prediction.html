@@ -1,0 +1,66 @@
+{% extends "material/base.html" %}
+{% block content %}
+
+
+<div class="showcase container blue">
+    <div class="row">
+        <div class="col 12 m10 offset-ml center">
+            <h2>Flower Species Predictor </h2>
+            <p>Predicting 5 species of flowers using CNN</p><br>
+            <p>
+                
+            </p>
+            <a href="{{url_for('index')}}" class="btn btn-small blue black-text waves-effect waves-dark lighten-3">Back</a>
+
+        </div>
+
+    </div>
+
+    </div>
+
+<section class="section section-signup">
+    <div class="container">
+    <div class="row"></div>
+<div class="col s12 m4 ">
+<div  class="card-panel blue lighten-4 grey-text text-darken-4 z-depth-0">
+    <form action="{{ url_for('cnn')}}" method="POST" enctype="multipart/form-data">
+    <div class="input-field" style=":text-align: center;">
+        <label for="myfile" ></label>
+        <input type="file" id="myfile" name="myfile"><br><br>
+    
+            <input type="submit" >
+        
+       </div>
+
+    </form>
+
+</div>
+
+
+<div class="col s4 m1 offers center">
+    <h5>Prediction</h5>
+      <div class="collection" role="alert">
+        <h5  class="collection-item active blue">Predicted result :{{ prediction }} </h5>
+    </div>
+</div>
+</div>
+</div>
+</section>>
+
+
+
+
+
+
+
+
+{% endblock %}
+
+
+{% block scripts %}
+{{ super() }}
+
+
+
+
+{% endblock %}
